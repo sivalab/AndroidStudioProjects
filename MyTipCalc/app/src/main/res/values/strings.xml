@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyTipCalc</string>
+    <string name="_15">15%</string>
+    <string name="_18">18%</string>
+    <string name="_20">20%</string>
+    <string name="enter_bill_amount">Enter Bill Amount</string>
+    <string name="enter_bill_amount_hint">Enter Bill Amount</string>
+    <string name="enter_bill_amount1">Enter Bill Amount</string>
+    <string name="tip_99_99_total_bill_99_99">Tip: $99.99, Total Bill $99.99</string>
+</resources>
