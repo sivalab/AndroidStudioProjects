@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="200dp"
         android:autofillHints=""
         android:hint="@string/enter_bill_amount"
         android:ems="7"
@@ -81,12 +81,12 @@
         />
 
     <TextView
-        android:id="@+id/total_amount"
+        android:id="@+id/result_Display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="80dp"
-        android:text="@string/tip_99_99_total_bill_99_99"
+        android:hint="@string/tip_99_99_total_bill_99_99"
         android:textColor="#004D40"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_click_per18" />

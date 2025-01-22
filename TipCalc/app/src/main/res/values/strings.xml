@@ -7,4 +7,5 @@
     <string name="tip_99_99_total_bill_99_99">Tip: $99.99, Total Bill: $99.99</string>
     <string name="enter_bill_amount">Enter Bill Amount</string>
     <string name="tip_calculator1">TIP CALCULATOR</string>
+    <string name="result_Display">Tip: $%1$.2f, Total Bill: $%2$.2f</string>
 </resources>
