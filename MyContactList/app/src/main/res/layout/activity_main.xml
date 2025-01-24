@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/navbar_background">
@@ -84,11 +85,11 @@
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:contentDescription="@string/scrollable_content_section"
         app:layout_constraintBottom_toTopOf="@id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        android:contentDescription="@string/scrollable_content_section">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -101,6 +102,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/contact"
+                android:textColor="#7986CB"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -116,8 +118,10 @@
                 android:imeOptions="actionNext"
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
+                android:textColorHint="#26A69A"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textContact" />
+
             <requestFocus />
 
             <TextView
@@ -127,6 +131,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/address"
+                android:textColor="#7986CB"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/editName" />
 
@@ -143,6 +148,7 @@
                 android:inputType="textPersonName"
                 android:minHeight="48dp"
                 android:nextFocusDown="@+id/editCity"
+                android:textColorHint="#7986CB"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textAddress" />
 
@@ -158,7 +164,8 @@
                 android:imeOptions="actionNext"
                 android:inputType="textCapWords"
                 android:minHeight="48dp"
-                android:nextFocusDown="+id/editState"
+                android:nextFocusDown="@+id/editState"
+                android:textColorHint="#7986CB"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/editAddress" />
 
@@ -176,8 +183,8 @@
                 android:minWidth="48dp"
                 android:minHeight="48dp"
                 android:nextFocusDown="@+id/editZipcode"
+                android:textColorHint="#7986CB"
                 app:layout_constraintStart_toEndOf="@id/editCity"
-                app:layout_constraintStart_toStartOf=""
                 app:layout_constraintTop_toBottomOf="@id/editAddress" />
 
             <EditText
@@ -193,17 +200,18 @@
                 android:inputType="number"
                 android:minHeight="48dp"
                 android:nextFocusDown="@+id/editHome"
+                android:textColorHint="#7986CB"
                 app:layout_constraintStart_toEndOf="@+id/editState"
-                app:layout_constraintStart_toStartOf=""
                 app:layout_constraintTop_toBottomOf="@id/editAddress" />
 
             <TextView
                 android:id="@+id/textHome"
-                android:text="@string/home_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:text="@string/home_phone"
+                android:textColor="#7986CB"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/editCity" />
 
@@ -221,16 +229,18 @@
                 android:minHeight="48dp"
                 android:nextFocusDown="@+id/editCell"
                 android:text=""
+                android:textColorHint="#7986CB"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/textHome" />
 
             <TextView
                 android:id="@+id/textCell"
-                android:text="@string/cell_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="16dp"
+                android:text="@string/cell_phone"
+                android:textColor="#7986CB"
                 app:layout_constraintStart_toEndOf="@id/editHome"
                 app:layout_constraintTop_toBottomOf="@id/editCity" />
 
@@ -248,8 +258,71 @@
                 android:minHeight="48dp"
                 android:nextFocusDown="@+id/editEmail"
                 android:text=""
+                android:textColorHint="#7986CB"
                 app:layout_constraintStart_toStartOf="@id/textCell"
                 app:layout_constraintTop_toBottomOf="@id/textCell" />
+
+            <TextView
+                android:id="@+id/textEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/email_address"
+                android:textColor="#7986CB"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editHome" />
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:autofillHints=""
+                android:ems="16"
+                android:hint="@string/enter_email_address"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLength="14"
+                android:minHeight="48dp"
+                android:nextFocusDown="@+id/editEmail"
+                android:text=""
+                android:textColorHint="#7986CB"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textEmail" />
+
+            <TextView
+                android:id="@+id/textBDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/birthday"
+                android:textColor="#7986CB"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editEmail" />
+
+            <TextView
+                android:id="@+id/textBirthDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/_01_01_1970"
+                android:textColor="#7986CB"
+                app:layout_constraintStart_toEndOf="@+id/textBDay"
+                app:layout_constraintTop_toBottomOf="@+id/editEmail" />
+
+            <Button
+                android:id="@+id/btnBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:text="@string/change"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textBirthDay"
+                app:layout_constraintEnd_toEndOf="parent" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

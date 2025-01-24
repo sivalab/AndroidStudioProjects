@@ -6,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ContactMapActivity">
+
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="395dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -39,9 +41,25 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_weight="1"
-            android:scaleType="centerCrop"
             android:contentDescription="@string/button_to_display_settings"
             android:importantForAccessibility="yes"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/settingsicon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="579dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/map_layout" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

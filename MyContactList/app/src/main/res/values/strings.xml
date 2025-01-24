@@ -16,4 +16,14 @@
     <string name="cell_phone">Cell Phone:</string>
     <string name="enter_phone_number">Enter phone number</string>
     <string name="enter_cell_phone_number">Enter Cell phone number</string>
+    <string name="email_address">Email Address:</string>
+    <string name="enter_email_address">Enter Email Address</string>
+    <string name="birthday">Birthday:</string>
+    <string name="_01_01_1970">01/01/1970</string>
+    <string name="change">Change</string>
+    <string name="cancel">Cancel</string>
+    <string name="select">Select</string>
+    <string name="map_details">Contact Map Location</string>
+    <string name="contact_settings">Contact Settings</string>
+    <string name="map_layout">Map Layout</string>
 </resources>
