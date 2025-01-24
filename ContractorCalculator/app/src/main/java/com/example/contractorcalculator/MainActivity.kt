@@ -1,47 +1,57 @@
 package com.example.contractorcalculator
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.contractorcalculator.ui.theme.ContractorCalculatorTheme
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
 
-class MainActivity : ComponentActivity() {
+
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            ContractorCalculatorTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+        setContentView(R.layout.activity_main)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        //
+        // Get References from Layout
+        val laborCostEditText: EditText = findViewById(R.id.editTextLaborCost)
+        val materialCostEditText: EditText = findViewById(R.id.editTextMaterialCost)
+        val textViewAmtSubTotal: TextView = findViewById(R.id.textViewSubTotalAmount)
+        val textViewAmtTax: TextView = findViewById(R.id.textViewTaxAmount)
+        val textViewAmtTotal: TextView = findViewById(R.id.textViewTotalAmount)
+        
+        val calculateButton: Button = findViewById(R.id.buttonCalculate)
+        
+
+        // Get Listener for Button
+        calculateButton.setOnClickListener {
+            val laborCostText =  laborCostEditText.text.toString()
+            val materialCostText =  materialCostEditText.text.toString()
+
+            val laborCost: Double = if (laborCostText.isEmpty()) {
+
+                0.00
+            } else {
+                laborCostText.toDouble()
             }
+            val materialCost: Double = if (materialCostText.isEmpty()) {
+
+                0.00
+            } else {
+                materialCostText.toDouble()
+            }
+            val subTotalAmt: Double = laborCost + materialCost
+            val taxAmt: Double = subTotalAmt*0.05
+            val totalAmt: Double = subTotalAmt + taxAmt
+
+            textViewAmtSubTotal.text = getString(R.string.subTotalAmt_String, subTotalAmt)
+            textViewAmtTax.text = getString(R.string.subTotalAmt_String, taxAmt)
+            textViewAmtTotal.text = getString(R.string.subTotalAmt_String, totalAmt)
         }
+
+
+
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ContractorCalculatorTheme {
-        Greeting("Android")
-    }
-}
