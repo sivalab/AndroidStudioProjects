@@ -62,7 +62,6 @@ class MainActivity : AppCompatActivity() {
 
         // function to disable all Details Section until product is select-- do it initially
         initResetScreen()
-
         initRadioButtonCd()
         initRadioButtonLoan()
         initRadioButtonCheckingAccount()
@@ -86,13 +85,14 @@ class MainActivity : AppCompatActivity() {
             enPayAmt = false,
             enIntRate = false
         )
-        clearMessage()
+        //        clearMessage()
     } // End of initResetScreen
 
 
     private fun initRadioButtonCd() {
         // get listener for CD
         cdRadioButton.setOnClickListener {
+            clearMessage()
             currentFinance.accounttype = "CD"
             initMainScreen(
                 enAccountNumber = true,
@@ -108,6 +108,7 @@ class MainActivity : AppCompatActivity() {
 
         // get listener for Loan
         loanRadioButton.setOnClickListener {
+            clearMessage()
             currentFinance.accounttype = "Loan"
             initMainScreen(
                 enAccountNumber = true,
@@ -123,6 +124,7 @@ class MainActivity : AppCompatActivity() {
 
         // get listener for Checking Account
         checkingAccountRadioButton.setOnClickListener {
+            clearMessage()
             currentFinance.accounttype = "CheckingAccount"
             initMainScreen(
                 enAccountNumber = true,
@@ -139,6 +141,7 @@ class MainActivity : AppCompatActivity() {
         // get listener for Cancel
         cancelButton.setOnClickListener {
             initResetScreen()
+            clearMessage()
 //            selectProductRadioGroup.clearCheck()
 //            clearMessage()
 //            clearFinanceData()
