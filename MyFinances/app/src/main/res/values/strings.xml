@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MyFinances</string>
+    <string name="select_product">Select Product:</string>
+    <string name="cd">CDs</string>
+    <string name="loans">Loans</string>
+    <string name="checking_account">Checking Accounts</string>
+    <string name="details">Details:</string>
+    <string name="account_number">Account Number:</string>
+    <string name="_14_digit_acct">14 digit Acct #</string>
+    <string name="initial_balance">Initial Balance:</string>
+    <string name="_0_00">0.00</string>
+    <string name="current_balance">Current Balance:</string>
+    <string name="payment_amount">Payment Amount:</string>
+    <string name="interest_rate">Interest Rate:</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_balance_amount">Enter Balance Amount</string>
+    <string name="message">Message</string>
+</resources>

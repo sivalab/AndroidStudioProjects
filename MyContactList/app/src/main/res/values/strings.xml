@@ -26,4 +26,11 @@
     <string name="map_details">Contact Map Location</string>
     <string name="contact_settings">Contact Settings</string>
     <string name="map_layout">Map Layout</string>
+    <string name="sort_contacts_by">Sort Contacts By:</string>
+    <string name="birthday_btn">Birthday</string>
+    <string name="city_bth">City</string>
+    <string name="name_bth">Name</string>
+    <string name="sort_order">Sort Order:</string>
+    <string name="ascending">Ascending</string>
+    <string name="descending">Descending</string>
 </resources>

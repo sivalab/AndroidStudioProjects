@@ -44,4 +44,86 @@
             android:importantForAccessibility="yes"
             app:srcCompat="@drawable/settingsicon" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewSortBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/sort_contacts_by"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupSortBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSortBy" >
+
+        <RadioButton
+            android:id="@+id/radioName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/name_bth"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/radioCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/city_bth"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/radioBirthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/birthday_btn"
+            android:textColor="@color/black"/>
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/textViewSortOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/sort_order"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupSortBy"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupSortOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSortOrder" >
+
+        <RadioButton
+            android:id="@+id/radioAscending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ascending"
+            android:textColor="@color/black"/>
+
+        <RadioButton
+            android:id="@+id/radioDescending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/descending"
+            android:textColor="@color/black"/>
+
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

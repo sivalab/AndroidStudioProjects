@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textViewSelectProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/select_product"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupSelectProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSelectProduct">
+
+            <RadioButton
+                android:id="@+id/radioButtonCd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/cd"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonLoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/loans"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioButtonCheckingAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/checking_account"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textViewProductDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/details"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroupSelectProduct" />
+
+
+    <TextView
+        android:id="@+id/textViewAccountNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account_number"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="280dp"
+        android:textColor="@color/white"
+        android:gravity="right"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProductDetails"
+        tools:ignore="RtlHardcoded" />
+
+    <EditText
+        android:id="@+id/editTextAccountNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/_14_digit_acct"
+        android:maxLength="14"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="#90CAF9"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewAccountNumber"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProductDetails" />
+
+    <TextView
+        android:id="@+id/textViewInitialBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/initial_balance"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="280dp"
+        android:textColor="@color/white"
+        android:gravity="right"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAccountNumber"
+        tools:ignore="RtlHardcoded" />
+
+    <EditText
+        android:id="@+id/editTextInitialBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/_0_00"
+        android:inputType="numberDecimal"
+        android:maxLength="13"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="#90CAF9"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewInitialBalance"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAccountNumber"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/textViewCurrentBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/current_balance"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="280dp"
+        android:textColor="@color/white"
+        android:gravity="right"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInitialBalance"
+        tools:ignore="RtlHardcoded" />
+
+    <EditText
+        android:id="@+id/editTextCurrentBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/_0_00"
+        android:maxLength="13"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="#90CAF9"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewCurrentBalance"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInitialBalance" />
+
+    <TextView
+        android:id="@+id/textViewPaymentAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/payment_amount"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="280dp"
+        android:textColor="@color/white"
+        android:gravity="right"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCurrentBalance"
+        tools:ignore="RtlHardcoded" />
+
+    <EditText
+        android:id="@+id/editTextPaymentAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/_0_00"
+        android:maxLength="13"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="#90CAF9"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewPaymentAmount"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCurrentBalance" />
+
+    <TextView
+        android:id="@+id/textViewInterestRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/interest_rate"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="280dp"
+        android:textColor="@color/white"
+        android:gravity="right"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPaymentAmount"
+        tools:ignore="RtlHardcoded" />
+
+    <EditText
+        android:id="@+id/editTextInterestRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="4"
+        android:hint="@string/_0_00"
+        android:maxLength="5"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="#90CAF9"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewInterestRate"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPaymentAmount" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInterestRate"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInterestRate"
+        app:layout_constraintStart_toEndOf="@+id/buttonSave"
+
+        />
+
+    <TextView
+        android:id="@+id/textViewDisplayMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/message"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCancel"
+         />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

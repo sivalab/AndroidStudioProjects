@@ -1,6 +1,8 @@
 package com.example.mycontactlist;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,40 @@ public class ContactMapActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        initListButton();
+        initMapButton();
+        initSettingsButton();
     }
+    private void initListButton() {
+        ImageButton iblist = findViewById(R.id.imageButtonList);
+        iblist.setOnClickListener(v -> {
+            Intent intent = new Intent(ContactMapActivity.this, ContactListActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        });
+
+
+
+    }
+
+    private void initMapButton() {
+        ImageButton iblist = findViewById(R.id.imageButtonMap);
+        //iblist.setOnClickListener(new View.OnClickListener() {
+        iblist.setOnClickListener(v -> {
+                Intent intent = new Intent(ContactMapActivity.this, ContactMapActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            });
+    }
+
+    private void initSettingsButton() {
+        ImageButton iblist = findViewById(R.id.imageButtonSettings);
+        iblist.setOnClickListener(v -> {
+            Intent intent = new Intent(ContactMapActivity.this, ContactSettingsActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+        });
+    }
+
 }
